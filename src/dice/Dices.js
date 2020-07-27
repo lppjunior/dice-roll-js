@@ -1,31 +1,34 @@
-import Dice from "./Dice.js";
+import Dice from './Dice.js'
 
 class Dices {
-    constructor(amount = null, faces = 6) {
-        if (amount === null) {
-            throw Error('Dice amount is null. Set that! Ex: new Dices(2);');
-        }
-
-        this.dices = Array.from(Array(amount), (_,x) => new Dice(faces));
+  constructor (amount = null, faces = 6) {
+    if (amount === null) {
+      throw Error('Dice amount is null. Set that! Ex: new Dices(2);')
     }
 
-    roll(options = { unique: false }) {
-        this.dices.map((dice) => dice.roll());
+    this.dices = Array.from(Array(amount), (_, x) => new Dice(faces))
+  }
 
-        if(options.unique && this.getUniqueValues().length < this.dices.length) {
-            this.roll(options);
-        }
+  roll (options = { unique: false }) {
+    this.dices.map((dice) => dice.roll())
 
-        return this;
+    if (options.unique && this.getUniqueValues().length < this.dices.length) {
+      this.roll(options)
     }
 
-    getValues() {
-        return this.dices.map((dice) => dice.getValue());
-    }
+    return this
+  }
 
-    getUniqueValues() {
-        return this.getValues().reduce((unique, item) => (unique.includes(item) ? unique : [...unique, item]), []);
-    }
+  getValues () {
+    return this.dices.map((dice) => dice.getValue())
+  }
+
+  getUniqueValues () {
+    return this.getValues()
+      .reduce(
+        (unique, item) => (unique.includes(item) ? unique : [...unique, item]), []
+      )
+  }
 }
 
-export default Dices;
+export default Dices
