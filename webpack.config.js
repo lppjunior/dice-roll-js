@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
@@ -14,9 +15,12 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Dice roll',
+      favicon: 'favicon.png'
+    }),
     new CopyPlugin({
       patterns: [
-        { from: 'index.html', to: '' },
         { from: 'favicon.png', to: '' }
       ]
     })
