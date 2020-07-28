@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2020-07-28
+## [1.1.0] - 2020-07-29
+### Add
+- Add dist compiled files
+### Changed
+- Remove index.html file
+- Add html-webpack-plugin to dynamic index.html file generate
+
+
+## [1.0.0] - 2020-07-27
 ### Added
 - Project conceived by: [@lppjunior](https://github.com/lppjunior).
 - First version of Dice and Dices module.
