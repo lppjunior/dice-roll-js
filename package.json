@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build & http-server dist",
-    "build": "npm run test webpack",
-    "test": "standard && jest --verbose"
+    "build": "npm run test & webpack",
+    "test": "standard & jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,14 @@
     "webpack-cli": "^3.3.12"
   },
   "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
     "transform": {
       "^.+\\.js$": "babel-jest"
     },
@@ -47,5 +55,17 @@
       "node_modules",
       "src"
     ]
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "rules": {
+      "indent": ["error", "tab"]
+    },
+    "rule": {
+      "indent": ["error", "tab"]
+    },
+    "indent": ["error", 4, { "SwitchCase": 1 }]
   }
 }
