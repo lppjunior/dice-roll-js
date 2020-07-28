@@ -1,0 +1,71 @@
+{
+  "name": "dice-roll-js",
+  "version": "1.0.0",
+  "description": "Dice Roll is a project of rolling dice javascript based. Developed to support any application that needs data with random numbers.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build & http-server dist",
+    "build": "npm run test & webpack",
+    "test": "standard & jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lppjunior/dice-js.git"
+  },
+  "author": "Luiz Paulo <lppjunior@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lppjunior/dice-js/issues"
+  },
+  "homepage": "https://github.com/lppjunior/dice-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "babel-jest": "^26.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0",
+    "standard": "^14.3.4",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "roots": [
+      "<rootDir>"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "rules": {
+      "indent": ["error", "tab"]
+    },
+    "rule": {
+      "indent": ["error", "tab"]
+    },
+    "indent": ["error", 4, { "SwitchCase": 1 }]
+  }
+}
