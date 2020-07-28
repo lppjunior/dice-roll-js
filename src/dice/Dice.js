@@ -1,3 +1,7 @@
+/**
+ * @author Luiz Paulo <lppjunior@gmil.com>
+ * @description Dice class is a most single mode of dice roll. With that, you can make randomic value with range from 1 to 'amount of sides'.
+ */
 class Dice {
   constructor (sides = 6) {
     this.valid(sides)
@@ -7,6 +11,10 @@ class Dice {
   roll () {
     this.value = Math.floor((Math.random() * this.sides) + 1)
     return this
+  }
+
+  getSides () {
+    return this.sides
   }
 
   getValue () {

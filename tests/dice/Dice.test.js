@@ -12,16 +12,16 @@ describe('Test Dice sides value', () => {
   const dice = new Dice()
 
   test('should be side amount type equals to Number', () => {
-    expect(dice.sides).toEqual(expect.any(Number))
+    expect(dice.getSides()).toEqual(expect.any(Number))
   })
 
   test('should be side amount equals to 6', () => {
-    expect(dice.sides).toBe(6)
+    expect(dice.getSides()).toBe(6)
   })
 
   test('should be side amount equal to 2', () => {
     const dice = new Dice(2)
-    expect(dice.sides)
+    expect(dice.getSides())
       .toBe(2)
   })
 })
