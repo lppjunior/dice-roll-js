@@ -2,11 +2,11 @@ import Dice from './../../src/dice/Dice.js'
 
 describe('Test Dice sides value', () => {
   test('should throw an error if side amount is not a number ', () => {
-    expect(() => new Dice('Test')).toThrow('The sides number must be a number')
+    expect(() => new Dice('Test')).toThrow(Error)
   })
 
   test('should throw an error if side amount less than ONE', () => {
-    expect(() => new Dice(0)).toThrow('The sides number must be greater than zero')
+    expect(() => new Dice(0)).toThrow(Error)
   })
 
   const dice = new Dice()

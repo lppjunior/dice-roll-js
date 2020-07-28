@@ -14,8 +14,8 @@ class Dice {
   }
 
   valid (sides) {
-    if (typeof sides !== 'number') throw 'The sides number must be a number'
-    if (sides < 1) throw 'The sides number must be greater than zero'
+    if (typeof sides !== 'number') throw new Error('The sides number must be a number')
+    if (sides < 1) throw new Error('The sides number must be greater than zero')
   }
 }
 

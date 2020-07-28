@@ -4,14 +4,13 @@ describe('Test value of Dice instance amount', () => {
   [null, 'test'].forEach(amount => {
     test('should throw an error to ' + amount, () => {
       expect(() => new Dices(amount))
-        .toThrow('The sides number must be a number')
+        .toThrow(Error)
     })
   });
 
   [-40000, -1, 0].forEach(amount => {
     test('should throw an error to ' + amount, () => {
-      expect(() => new Dices(amount))
-        .toThrow('The sides number must be greater than zero')
+      expect(() => new Dices(amount)).toThrow(Error)
     })
   });
 
