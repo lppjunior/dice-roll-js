@@ -1,7 +1,7 @@
 {
-  "name": "dice-js",
+  "name": "dice-roll-js",
   "version": "1.0.0",
-  "description": "This is a project of rolling dice javascript based. Developed to support any application that needs data with random numbers.",
+  "description": "Dice Roll is a project of rolling dice javascript based. Developed to support any application that needs data with random numbers.",
   "private": true,
   "main": "index.js",
   "scripts": {
