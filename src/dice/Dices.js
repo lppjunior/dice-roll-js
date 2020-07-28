@@ -2,7 +2,7 @@ import Dice from './Dice.js'
 
 class Dices {
   constructor (amount = 2, sides = 6) {
-    this.valid(amount);
+    this.valid(amount)
     this.dices = Array.from(Array(amount), (_, x) => new Dice(sides))
   }
 
