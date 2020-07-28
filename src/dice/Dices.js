@@ -1,12 +1,9 @@
 import Dice from './Dice.js'
 
 class Dices {
-  constructor (amount = null, faces = 6) {
-    if (amount === null) {
-      throw Error('Dice amount is null. Set that! Ex: new Dices(2);')
-    }
-
-    this.dices = Array.from(Array(amount), (_, x) => new Dice(faces))
+  constructor (amount = 2, sides = 6) {
+    this.valid(amount);
+    this.dices = Array.from(Array(amount), (_, x) => new Dice(sides))
   }
 
   roll (options = { unique: false }) {
@@ -19,6 +16,10 @@ class Dices {
     return this
   }
 
+  getAmount () {
+    return this.dices.length
+  }
+
   getValues () {
     return this.dices.map((dice) => dice.getValue())
   }
@@ -28,6 +29,11 @@ class Dices {
       .reduce(
         (unique, item) => (unique.includes(item) ? unique : [...unique, item]), []
       )
+  }
+
+  valid (sides) {
+    if (typeof sides !== 'number') throw 'The sides number must be a number'
+    if (sides < 1) throw 'The sides number must be greater than zero'
   }
 }
 
