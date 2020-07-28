@@ -28,6 +28,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.5.0",
+    "html-webpack-plugin": "^4.3.0",
     "jest": "^26.1.0",
     "standard": "^14.3.4",
     "webpack": "^4.44.0",
@@ -59,13 +60,6 @@
   "standard": {
     "env": [
       "jest"
-    ],
-    "rules": {
-      "indent": ["error", "tab"]
-    },
-    "rule": {
-      "indent": ["error", "tab"]
-    },
-    "indent": ["error", 4, { "SwitchCase": 1 }]
+    ]
   }
 }
