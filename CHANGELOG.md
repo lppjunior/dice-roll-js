@@ -7,13 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0] - 2020-07-29
+## [1.2.0] - 2020-07-29
+### Add
+- Add webpack-dev-server plugin
+- Add source map to weboack build
+### Change
+- Update 'npm start' page. Add example with many executions
+
+## [1.1.0] - 2020-07-28
 ### Add
 - Add dist compiled files
 ### Changed
 - Remove index.html file
 - Add html-webpack-plugin to dynamic index.html file generate
-
 
 ## [1.0.0] - 2020-07-27
 ### Added

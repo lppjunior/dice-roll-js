@@ -1,5 +1,9 @@
 import Dice from './Dice.js'
 
+/**
+ * @author Luiz Paulo <lppjunior@gmil.com>
+ * @description Dices class make many instances of Dice class. You can make randomic values with range from 1 to 'amount of sides'.
+ */
 class Dices {
   constructor (amount = 2, sides) {
     this.valid(amount)

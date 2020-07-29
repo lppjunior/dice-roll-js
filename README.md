@@ -4,25 +4,12 @@ Dice Roll is a project of rolling dice javascript based. Developed to support an
 
 With this project, you can create a single instance of dice roll or create an instance of many rolling dices that will work together.
 
-## Project Objective
+## Objective
 This project is a prototype of study, implementation, configure of many tecnologies, how: ES6, Eslint, jest, standard, babel, webpack
 
 I chose as many technologies as possible to implement within a small project. If you have any ideas for anything else I can do around here, I'll be happy to receive your feedback.
 
 ## Install
-To install this project, you need to have some things previously installed in your environment.
-
-I hope you know about the basis of my project, but if you don't know much, here are some documents that can help you:
-
-* [Node.js](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/)
-* [ES6](http://es6-features.org/)
-* [standard](https://standardjs.com/)
-* [Eslint](https://eslint.org/)
-* [jest](https://jestjs.io/)
-* [babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
-
 
 Run this command to install project dependencies
 ```shell
@@ -34,7 +21,7 @@ To see example of this project, run:
 npm start
 ```
 
-To get a code build, you can use this command:
+To generate a build, you have to execute:
 ```sh
 npm run build # This command generate '/dist' files
 ```
@@ -105,6 +92,21 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Project Updates
 
 See the [CHANGELOG](CHANGELOG.md) for all version update details
+
+
+## References
+
+I hope you know about the basis of my project, but if you don't know much, here are some documents that can help you:
+
+* [Node.js](https://nodejs.org/en/)
+* [NPM](https://www.npmjs.com/)
+* [ES6](http://es6-features.org/)
+* [standard](https://standardjs.com/)
+* [Eslint](https://eslint.org/)
+* [jest](https://jestjs.io/)
+* [babel](https://babeljs.io/)
+* [webpack](https://webpack.js.org/)
+
 
 ## License
 
