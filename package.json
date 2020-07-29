@@ -61,6 +61,10 @@
   "standard": {
     "env": [
       "jest"
+    ],
+    "ignore": [
+      "/example/**/*.js",
+      "/dist/**/*.js"
     ]
   }
 }
