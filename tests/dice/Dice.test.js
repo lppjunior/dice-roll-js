@@ -1,4 +1,6 @@
-import Dice from './../../src/dice/Dice.js'
+import {
+  Dice
+} from './../../src/app.js'
 
 describe('Test Dice sides value', () => {
   test('should throw an error if side amount is not a number ', () => {

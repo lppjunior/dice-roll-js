@@ -1,4 +1,6 @@
-import Dices from './../../src/dice/Dices.js'
+import {
+  Dices
+} from './../../src/app.js'
 
 describe('Test value of Dice instance amount', () => {
   [null, 'test'].forEach(amount => {
