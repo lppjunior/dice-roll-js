@@ -24,5 +24,13 @@ module.exports = {
         { from: 'favicon.png', to: '' }
       ]
     })
-  ]
+  ],
+
+  // webpack-dev-server configurations
+  devServer: {
+    compress: true,
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+    port: 9000
+  }
 }
