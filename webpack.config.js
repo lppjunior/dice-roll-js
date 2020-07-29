@@ -1,27 +1,28 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
-const libraryName = 'dices'
-
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    dices: './src/app.js'
+  },
   output: {
-    filename: `${libraryName}.min.js`,
+    filename: '[name].min.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd'
   },
-
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Dice roll',
-      favicon: 'favicon.png'
+      favicon: 'example/favicon.png',
+      template: 'example/index.html'
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'favicon.png', to: '' }
+        { from: 'example/main.js', to: '' }
       ]
     })
   ],
