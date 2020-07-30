@@ -2,20 +2,7 @@ import {
   Dices
 } from './../../src'
 
-describe('Test value of Dice instance amount', () => {
-  [null, 'test'].forEach(amount => {
-    test(`should throw an error to ${amount} amount`, () => {
-      expect(() => new Dices(amount))
-        .toThrow(Error)
-    })
-  });
-
-  [-40000, -1, 0].forEach(amount => {
-    test(`should throw an error to ${amount} amount`, () => {
-      expect(() => new Dices(amount)).toThrow(Error)
-    })
-  });
-
+describe('Test value of Dices instance amount', () => {
   [2, 3, 10, 40].forEach(amount => {
     test(`should assert amount is ${amount}`, () => {
       const dices = new Dices(amount, amount)
@@ -26,6 +13,7 @@ describe('Test value of Dice instance amount', () => {
 
   test('should assert amount default value is 2', () => {
     const dices = new Dices()
+    dices.roll()
     expect(dices.getAmount())
       .toEqual(2)
   })

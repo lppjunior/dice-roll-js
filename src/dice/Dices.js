@@ -6,7 +6,6 @@ import Dice from './Dice'
  */
 class Dices {
   constructor (amount = 2, sides) {
-    this.valid(amount)
     this.dices = Array.from(Array(amount), (_, x) => new Dice(sides))
   }
 
@@ -33,11 +32,6 @@ class Dices {
       .reduce(
         (unique, item) => (unique.includes(item) ? unique : [...unique, item]), []
       )
-  }
-
-  valid (sides) {
-    if (typeof sides !== 'number') throw new Error('The sides number must be a number')
-    if (sides < 1) throw new Error('The sides number must be greater than zero')
   }
 }
 
