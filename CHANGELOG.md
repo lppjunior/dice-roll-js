@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2020-07-29
+### Change
+- Rename index src file
+- Remove '.js' from import
+- Review all test descriptions
+- Review DEADME
+- Rename src-example directory
+- Update license to MIT format
+- Update dist source map
+
 ## [1.2.0] - 2020-07-29
 ### Add
 - Add webpack-dev-server plugin

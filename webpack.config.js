@@ -5,7 +5,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    dices: './src/app.js'
+    dices: './src'
   },
   output: {
     filename: '[name].min.js',
@@ -17,12 +17,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Dice roll',
-      favicon: 'example/favicon.png',
-      template: 'example/index.html'
+      favicon: 'src-example/favicon.png',
+      template: 'src-example/index.html'
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'example/main.js', to: '' }
+        { from: 'src-example/main.js', to: '' }
       ]
     })
   ],
