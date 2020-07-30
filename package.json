@@ -1,6 +1,6 @@
 {
   "name": "dice-roll-js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Dice Roll is a project of rolling dice javascript based. Developed to support any application that needs data with random numbers.",
   "private": true,
   "main": "index.js",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/lppjunior/dice-roll-js.git"
   },
   "author": "Luiz Paulo <lppjunior@gmail.com>",
-  "license": "ISC",
+  "license": "MIT License",
   "bugs": {
     "url": "https://github.com/lppjunior/dice-roll-js/issues"
   },
