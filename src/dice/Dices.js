@@ -1,4 +1,4 @@
-import Dice from './Dice.js'
+import Dice from './Dice'
 
 /**
  * @author Luiz Paulo <lppjunior@gmil.com>

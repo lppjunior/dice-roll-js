@@ -31,8 +31,13 @@ npm run build # This command generate '/dist' files
 ### Single dice instance
 Dice class is a most single mode of dice roll. With that, you can make randomic value with range from 1 to 'amount of sides'.
 
+**Class structure**
 ```js
-class Dice(sides: number)
+class Dice(sides: int) {
+  roll(): Dice
+  getSides(): int
+  getValue(): int
+}
 ```
 
 This is an example to make Dice instances:
@@ -57,8 +62,14 @@ dice2.roll().getValue() // result: An aleatory Number between 1 and 10
 ### Multiple dice instances
 Dices class is a roller of dice series. With that, you can make roll of many dices at the sume time.
 
+**Class structure**
 ```js
-class Dices(amount: number, sides: number)
+class Dices(amount: int, sides: int) {
+  roll (options = { unique: boolean }): Dice
+  getAmount(): int
+  getValues(): Array(int)
+  getUniqueValues(): Array(int)
+}
 ```
 
 This is an example to make Dices instances:
@@ -110,4 +121,4 @@ I hope you know about the basis of my project, but if you don't know much, here 
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

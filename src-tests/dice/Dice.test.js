@@ -1,6 +1,6 @@
 import {
   Dice
-} from './../../src/app.js'
+} from '../../src'
 
 describe('Test Dice sides value', () => {
   test('should throw an error if side amount is not a number ', () => {
@@ -13,15 +13,15 @@ describe('Test Dice sides value', () => {
 
   const dice = new Dice()
 
-  test('should be side amount type equals to Number', () => {
+  test('should assert side amount type is a Number', () => {
     expect(dice.getSides()).toEqual(expect.any(Number))
   })
 
-  test('should be side amount equals to 6', () => {
+  test('should assert side amount is 6', () => {
     expect(dice.getSides()).toBe(6)
   })
 
-  test('should be side amount equal to 2', () => {
+  test('should assert side amount is 2', () => {
     const dice = new Dice(2)
     expect(dice.getSides())
       .toBe(2)

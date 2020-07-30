@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lppjunior/dice-js.git"
+    "url": "git+https://github.com/lppjunior/dice-roll-js.git"
   },
-  "author": "Luiz Paulo <lppjunior@gmail.com",
+  "author": "Luiz Paulo <lppjunior@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lppjunior/dice-js/issues"
+    "url": "https://github.com/lppjunior/dice-roll-js/issues"
   },
-  "homepage": "https://github.com/lppjunior/dice-js#readme",
+  "homepage": "https://github.com/lppjunior/dice-roll-js#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -63,7 +63,7 @@
       "jest"
     ],
     "ignore": [
-      "/example/**/*.js",
+      "/src-example/**/*.js",
       "/dist/**/*.js"
     ]
   }
