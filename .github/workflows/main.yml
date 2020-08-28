@@ -4,8 +4,10 @@
 name: dice-roll-js Integration Action
 
 on:
-  release:
-    types: [ created ]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 env:
   NODE_VERSION: 12.x
@@ -25,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run Standard
-      run: standard
+      run: npx standard
     - name: Run Jest
       run: npm run jest
     - name: Run Build
