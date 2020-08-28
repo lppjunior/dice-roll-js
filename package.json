@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "npm run test && webpack --mode production",
-    "test": "npm run standard & npm run jest",
+    "build": "npm run test & npm run webpack",
+    "test": "standard & npm run jest",
+    "webpack": "webpack --mode production",
     "standard": "standard",
     "jest": "jest --verbose --coverage"
   },
