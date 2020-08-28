@@ -17,6 +17,12 @@ describe('Test Dice sides value', () => {
     expect(dice.getSides()).toEqual(expect.any(Number))
   })
 
+  test('should assert dice roll number between 1, 6', () => {
+    dice.roll()
+    expect(dice.getValue()).toBeGreaterThanOrEqual(0)
+    expect(dice.getValue()).toBeLessThan(7)
+  })
+
   test('should assert side amount is 6', () => {
     expect(dice.getSides()).toBe(6)
   })
