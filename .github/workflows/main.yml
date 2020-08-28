@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run Standard
-      run: standard
+      run: npx standard
     - name: Run Jest
       run: npm run jest
     - name: Run Build
