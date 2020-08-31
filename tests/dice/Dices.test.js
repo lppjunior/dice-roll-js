@@ -54,7 +54,7 @@ describe('Dices', () => {
       expect(dices.getAmount()).toEqual(expect.any(Number))
     })
 
-    test(`should assert than result is equals to Dices.DEFAULT_AMOUNT`, () => {
+    test('should assert than result is equals to Dices.DEFAULT_AMOUNT', () => {
       expect(dices.getAmount()).toEqual(Dices.DEFAULT_AMOUNT)
     })
 
@@ -68,7 +68,7 @@ describe('Dices', () => {
       expect(dices.getSides()).toEqual(expect.any(Number))
     })
 
-    test(`should assert than result is equals to Dice.DEFAULT_SIDES`, () => {
+    test('should assert than result is equals to Dice.DEFAULT_SIDES', () => {
       expect(dices.getSides()).toEqual(Dice.DEFAULT_SIDES)
     })
 

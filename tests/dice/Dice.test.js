@@ -36,7 +36,7 @@ describe('Dice', () => {
       expect(dice.getSides()).toEqual(expect.any(Number))
     })
 
-    test(`should assert than result is equals to Dice.DEFAULT_SIDES`, () => {
+    test('should assert than result is equals to Dice.DEFAULT_SIDES', () => {
       expect(dice.getSides()).toEqual(Dice.DEFAULT_SIDES)
     })
 

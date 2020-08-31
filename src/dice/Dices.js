@@ -47,5 +47,4 @@ class Dices {
 
 Dices.DEFAULT_AMOUNT = 2
 
-
 export default Dices
