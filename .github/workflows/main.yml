@@ -33,4 +33,4 @@ jobs:
     - name: Run Build
       run: npm run webpack
     - name: List output files
-      run: ls
+      run: ls dist
