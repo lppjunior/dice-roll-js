@@ -3,35 +3,35 @@ import { Dice } from '../../src'
 describe('Dice', () => {
   const dice = new Dice()
 
-  describe('Testing if all methods and attributes are defined', () => {
-    test('should assert than Dice.DEFAULT_SIDES is defined', () => {
+  describe('Test existance of all public methods and attributes', () => {
+    test('should assert than Dice.DEFAULT_SIDES has been defined', () => {
       expect(Dice.DEFAULT_SIDES).toBeDefined()
     })
 
-    test('should assert than dice has been defined', () => {
+    test('should assert than dice instance has been defined', () => {
       expect(dice).toBeDefined()
     })
 
-    test('should assert than roll has been defined', () => {
+    test('should assert than roll method has been defined', () => {
       expect(dice.roll).toBeDefined()
     })
 
-    test('should assert than getSides has been defined', () => {
+    test('should assert than getSides method has been defined', () => {
       expect(dice.getSides).toBeDefined()
     })
 
-    test('should assert than getValue has been defined', () => {
+    test('should assert than getValue method has been defined', () => {
       expect(dice.getValue).toBeDefined()
     })
   })
 
-  describe('dices.roll() test', () => {
+  describe('Test dices.roll()', () => {
     test('should assert than result is an intanceof Dice', () => {
       expect(dice.roll()).toBeInstanceOf(Dice)
     })
   })
 
-  describe('dice.getSides() test', () => {
+  describe('Test dice.getSides()', () => {
     test('should assert than result is a Number', () => {
       expect(dice.getSides()).toEqual(expect.any(Number))
     })
@@ -45,7 +45,7 @@ describe('Dice', () => {
     })
   })
 
-  describe('dice.getValue() test', () => {
+  describe('Test dice.getValue()', () => {
     const value = dice.roll().getValue()
 
     test('should assert than result is a Number', () => {

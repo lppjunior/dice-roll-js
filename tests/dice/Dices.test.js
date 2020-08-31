@@ -3,43 +3,43 @@ import { Dices, Dice } from '../../src'
 describe('Dices', () => {
   const dices = new Dices()
 
-  describe('Testing if all methods and attributes are defined', () => {
-    test('should assert than Dices.DEFAULT_AMOUNT is defined', () => {
+  describe('Test existance of all public methods and attributes', () => {
+    test('should assert than Dices.DEFAULT_AMOUNT property has been defined', () => {
       expect(Dices.DEFAULT_AMOUNT).toBeDefined()
     })
 
-    test('should assert than dices has been defined', () => {
+    test('should assert than dices instance has been defined', () => {
       expect(dices).toBeDefined()
     })
 
-    test('should assert than roll has been defined', () => {
+    test('should assert than roll method has been defined', () => {
       expect(dices.roll).toBeDefined()
     })
 
-    test('should assert than getSides has been defined', () => {
+    test('should assert than getSides method has been defined', () => {
       expect(dices.getSides).toBeDefined()
     })
 
-    test('should assert than getAmount has been defined', () => {
+    test('should assert than getAmount method has been defined', () => {
       expect(dices.getAmount).toBeDefined()
     })
 
-    test('should assert than getValues has been defined', () => {
+    test('should assert than getValues method has been defined', () => {
       expect(dices.getValues).toBeDefined()
     })
 
-    test('should assert than getUniqueValues has been defined', () => {
+    test('should assert than getUniqueValues method has been defined', () => {
       expect(dices.getUniqueValues).toBeDefined()
     })
   })
 
-  describe('dicess.roll() test', () => {
+  describe('Test dicess.roll()', () => {
     test('should assert than result is an intanceof Dices', () => {
       expect(dices.roll()).toBeInstanceOf(Dices)
     })
   })
 
-  describe('dicess.roll({ unique: true }) test', () => {
+  describe('Test dicess.roll({ unique: true })', () => {
     test('should assert than result is an intanceof Dices', () => {
       expect(dices.roll({ unique: true })).toBeInstanceOf(Dices)
     })
@@ -49,7 +49,7 @@ describe('Dices', () => {
     })
   })
 
-  describe('dices.getAmount() test', () => {
+  describe('Test dices.getAmount()', () => {
     test('should assert than result is a Number', () => {
       expect(dices.getAmount()).toEqual(expect.any(Number))
     })
@@ -63,7 +63,7 @@ describe('Dices', () => {
     })
   })
 
-  describe('dices.getSides() test', () => {
+  describe('Test dices.getSides()', () => {
     test('should assert than result is a Number', () => {
       expect(dices.getSides()).toEqual(expect.any(Number))
     })
@@ -77,7 +77,7 @@ describe('Dices', () => {
     })
   })
 
-  describe('dices.getValues() test', () => {
+  describe('Test dices.getValues()', () => {
     const values = dices.roll().getValues()
 
     test('should assert than amount of values is Dices.DEFAULT_AMOUNT', () => {
@@ -99,7 +99,7 @@ describe('Dices', () => {
     })
   })
 
-  describe('dices.getUniqueValues() test', () => {
+  describe('Test dices.getUniqueValues()', () => {
     test('should assert than amount of values less than or equals to Dices.DEFAULT_AMOUNT', () => {
       expect(dices.roll().getUniqueValues().length).toBeLessThanOrEqual(Dices.DEFAULT_AMOUNT)
     })
@@ -110,7 +110,7 @@ describe('Dices', () => {
   })
 })
 
-describe('extra tests', () => {
+describe('Test calls with many parameter values', () => {
   describe('Test value of Dices instance amount', () => {
     [2, 3, 10, 40].forEach(amount => {
       test(`should assert amount is ${amount}`, () => {
