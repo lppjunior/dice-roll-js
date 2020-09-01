@@ -10,17 +10,24 @@ class Dices {
   }
 
   roll (options = { unique: false }) {
-    this.dices.map((dice) => dice.roll())
+    const values = []
 
-    if (options.unique) {
-      if (this.getAmount() > this.getSides()) {
-        throw new Error('To achieve unique values, the sides amount must be greater than (or equals to) dice amount')
-      }
-
-      if (this.getUniqueValues().length < this.dices.length) {
-        this.roll(options)
-      }
+    if (options.unique && this.getAmount() > this.getSides()) {
+      throw new Error('To achieve unique values, the sides amount must be greater than (or equals to) dice amount')
     }
+
+    this.dices.map((dice) => {
+      let isValid = true
+
+      do {
+        dice.roll()
+
+        if ((isValid = !options.unique || options.unique && values.indexOf(dice.getValue()) === -1)) {
+          values.push(dice.getValue())
+        }
+
+      } while (!isValid)
+    })
 
     return this
   }

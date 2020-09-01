@@ -101,11 +101,7 @@ describe('Dices', () => {
 
   describe('Test dices.getUniqueValues()', () => {
     test('should assert than amount of values less than or equals to Dices.DEFAULT_AMOUNT', () => {
-      expect(dices.roll().getUniqueValues().length).toBeLessThanOrEqual(Dices.DEFAULT_AMOUNT)
-    })
-
-    test('when roll dices with options: { unique:true }, should assert amount of values is equals to Dices.DEFAULT_AMOUNT', () => {
-      expect(dices.roll({ unique: true }).getUniqueValues().length).toEqual(Dices.DEFAULT_AMOUNT)
+      expect((new Dices(5, 2)).roll().getUniqueValues().length).toBeLessThanOrEqual(Dices.DEFAULT_AMOUNT)
     })
   })
 })
