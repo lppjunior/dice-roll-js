@@ -73,7 +73,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm run test -- --configuration=ci && npm run e2e -- --configuration=ci"
+      "pre-push": "npm run test"
     }
   }
 }

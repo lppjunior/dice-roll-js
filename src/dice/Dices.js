@@ -25,7 +25,6 @@ class Dices {
         if ((isValid = !options.unique || options.unique && values.indexOf(dice.getValue()) === -1)) {
           values.push(dice.getValue())
         }
-
       } while (!isValid)
     })
 
