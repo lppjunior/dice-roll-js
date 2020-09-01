@@ -32,6 +32,7 @@
     "copy-webpack-plugin": "^6.1.0",
     "eslint": "^7.8.0",
     "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.2.5",
     "jest": "^26.4.2",
     "standard": "^14.3.4",
     "webpack": "^4.44.1",
@@ -69,5 +70,10 @@
       "/src-example/**/*.js",
       "/dist/**/*.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run test -- --configuration=ci && npm run e2e -- --configuration=ci"
+    }
   }
 }
