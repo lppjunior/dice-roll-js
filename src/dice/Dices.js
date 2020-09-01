@@ -22,7 +22,8 @@ class Dices {
       do {
         dice.roll()
 
-        if ((isValid = !options.unique || options.unique && values.indexOf(dice.getValue()) === -1)) {
+        isValid = !options.unique || (options.unique && values.indexOf(dice.getValue()) === -1)
+        if (isValid) {
           values.push(dice.getValue())
         }
       } while (!isValid)
