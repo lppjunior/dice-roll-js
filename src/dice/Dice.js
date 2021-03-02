@@ -3,9 +3,8 @@
  * @description Dice class is a most single mode of dice roll. With that, you can make randomic value with range from 1 to 'amount of sides'.
  */
 class Dice {
-  constructor (sides = 6) {
-    this.valid(sides)
-    this.sides = sides
+  constructor (sides) {
+    this.sides = sides || Dice.DEFAULT_SIDES
   }
 
   roll () {
@@ -20,11 +19,8 @@ class Dice {
   getValue () {
     return this.value
   }
-
-  valid (sides) {
-    if (typeof sides !== 'number') throw new Error('The sides number must be a number')
-    if (sides < 1) throw new Error('The sides number must be greater than zero')
-  }
 }
+
+Dice.DEFAULT_SIDES = 6
 
 export default Dice

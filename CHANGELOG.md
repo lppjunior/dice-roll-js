@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Change
+- Remove Dice parameter validation
+- Add default sides to Dice object
+- Add Dices default amount
+- Add Dices getSides method
+- Add exception verification when roll unique ahd dice amount is greater then dice sides
+- Review all tests
+- Update Github actions
 
 ## [1.3.1] - 2020-08-28
 ### Bugfix
