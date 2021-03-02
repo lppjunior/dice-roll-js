@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Change
+
+## [1.4.0] - 2021-03-02
+### Change
 - Remove Dice parameter validation
 - Add default sides to Dice object
 - Add Dices default amount
