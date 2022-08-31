@@ -1,7 +1,7 @@
 import Dice from './Dice'
 
 /**
- * @author Luiz Paulo <lppjunior@gmil.com>
+ * @author Luiz Paulo <lppjunior@gmail.com>
  * @description Dices class make many instances of Dice class. You can make randomic values with range from 1 to 'amount of sides'.
  */
 class Dices {
