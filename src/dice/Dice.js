@@ -1,5 +1,5 @@
 /**
- * @author Luiz Paulo <lppjunior@gmil.com>
+ * @author Luiz Paulo <lppjunior@gmail.com>
  * @description Dice class is a most single mode of dice roll. With that, you can make randomic value with range from 1 to 'amount of sides'.
  */
 class Dice {
